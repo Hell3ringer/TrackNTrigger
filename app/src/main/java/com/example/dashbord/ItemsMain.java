@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.OnButtonClickListener {
+public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.OnButtonClickListener, RecyclerViewAdapter.OnButtonShareListenr {
     private TextView name, quantity, type;
 
 
@@ -109,7 +109,7 @@ public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerViewAdapter = new RecyclerViewAdapter(itemsname,itemsquantity,itemstype,this);
+        recyclerViewAdapter = new RecyclerViewAdapter(itemsname,itemsquantity,itemstype,this,this);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
@@ -139,6 +139,23 @@ public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.
         intent1.putExtra("childID",childID.get(position));
         startActivity(intent1);
     }
+
+    @Override
+    public void onButtonShare(int position) {
+
+        Intent myIntent= new Intent(Intent.ACTION_SEND);
+        myIntent.setType("text/plain");
+        String shareBody=itemsname.get(position);
+        String shareSub="FOOD ITEM SHARING";
+        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+        String sharebody1=itemsquantity.get(position);
+        String sharebody2=itemstype.get(position);
+        myIntent.putExtra(Intent.EXTRA_TEXT,"Item Name: "+shareBody+"\n"+ "Quantity: "+sharebody1 +"\n"+ "Item type: "+sharebody2);
+
+        startActivity(Intent.createChooser(myIntent,"Share using"));
+
+    }
+
     private void firebaseinfo() {
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -169,12 +186,19 @@ public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.
             }
         });
     }
-
-
-
-
-
-
+//    private void shareitem(newitem note) {
+//        Intent myIntent= new Intent(Intent.ACTION_SEND);
+//        myIntent.setType("text/plain");
+//        String shareBody=note.getItmname();
+//        String shareSub="FOOD ITEM SHARING";
+//        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+//        String sharebody1=note.getItmquantity();
+//        String sharebody2=note.getItmtype();
+//        myIntent.putExtra(Intent.EXTRA_TEXT,"Item Name: "+shareBody+"\n"+ "Available Quantity: "+sharebody1 + "\n" + "Item Type: " + sharebody2 + "\n");
+//
+//
+//        startActivity(Intent.createChooser(myIntent,"Share using"));
+//    }
 
 
     @Override
@@ -191,7 +215,9 @@ public class ItemsMain extends AppCompatActivity implements RecyclerViewAdapter.
         initRecyclerView();
         firebaseinfo();
         }
-    }
+
+
+}
 
 
 

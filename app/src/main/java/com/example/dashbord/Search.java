@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Search extends AppCompatActivity implements com.example.dashbord.SearchAdapter.OnButtonClickListener {
+public class Search extends AppCompatActivity implements com.example.dashbord.SearchAdapter.OnButtonClickListener, com.example.dashbord.SearchAdapter.OnButtonShareListenr {
 
     private EditText search;
     private ImageButton btnback,searchbtn1;
@@ -84,7 +84,7 @@ public class Search extends AppCompatActivity implements com.example.dashbord.Se
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         searchrecycleview.setLayoutManager(layoutManager);
-        SearchAdapter = new com.example.dashbord.SearchAdapter(itemsname,itemsquantity,itemstype,this);
+        SearchAdapter = new com.example.dashbord.SearchAdapter(itemsname,itemsquantity,itemstype,this,this);
         searchrecycleview.setAdapter(SearchAdapter);
     }
     @Override
@@ -95,6 +95,21 @@ public class Search extends AppCompatActivity implements com.example.dashbord.Se
 
         intent1.putExtra("childID",childID.get(position));
         startActivity(intent1);
+    }
+
+    @Override
+    public void onButtonShare(int position) {
+        Intent myIntent= new Intent(Intent.ACTION_SEND);
+        myIntent.setType("text/plain");
+        String shareBody=itemsname.get(position);
+        String shareSub="FOOD ITEM SHARING";
+        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+        String sharebody1=itemsquantity.get(position);
+        String sharebody2=itemstype.get(position);
+        myIntent.putExtra(Intent.EXTRA_TEXT,"Item Name: "+shareBody+"\n"+ "Quantity: "+sharebody1 +"\n"+ "Item type: "+sharebody2);
+
+        startActivity(Intent.createChooser(myIntent,"Share using"));
+
     }
 
     @Override
