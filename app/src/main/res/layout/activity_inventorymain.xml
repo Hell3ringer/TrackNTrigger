@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".inventoryMain">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="DASHBORD"
+            android:textSize="40dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/dashrecyclerview"
+
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+
+        android:background="#F44336"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="#F44336"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="735dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

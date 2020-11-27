@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/dashrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="96dp"
+
+            android:layout_height="96dp"
+            android:background="@drawable/circular" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="hellogggggggggggiofdhello"
+            android:textSize="@android:dimen/app_icon_size"
+
+
+             />
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

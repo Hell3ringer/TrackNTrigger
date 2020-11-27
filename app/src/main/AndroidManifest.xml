@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dashbord">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,8 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dashbord">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".Inventory" />
+        <activity android:name=".Profile"/>
         <activity android:name=".dashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".addCategory"/>
+        <activity android:name=".inventoryMain" />
+
+
+        <activity android:name=".Search" />
+        <activity android:name=".Update" />
+        <activity android:name=".additem" />
+        <activity android:name=".ItemsMain"/>
+
+
+        <activity android:name=".AddModifyTask"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <activity android:name=".to_do"/>
     </application>
 
 </manifest>

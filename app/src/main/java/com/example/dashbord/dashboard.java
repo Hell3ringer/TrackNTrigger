@@ -12,6 +12,7 @@ public class dashboard extends AppCompatActivity {
     private Intent intent;
 
 
+
     private void setUI(){
         inv=findViewById(R.id.inv);
         doc=findViewById(R.id.doc);
@@ -24,7 +25,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,inventoryMain.class));
 
             }
         });
@@ -32,7 +33,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,Profile.class));
 
             }
         });
@@ -40,7 +41,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,to_do.class));
 
             }
         });
@@ -48,7 +49,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,Profile.class));
 
             }
         });
@@ -56,7 +57,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,Profile.class));
 
             }
         });
@@ -64,7 +65,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Inventory.class));
+                startActivity(intent = new Intent(dashboard.this,Profile.class));
 
             }
         });

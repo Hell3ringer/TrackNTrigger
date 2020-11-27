@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Dashbord</string>
+
+    <string name="sr_no">Sr.no</string>
+    <string name="name">Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="add">+</string>
+    <string name="type">Type</string>
 </resources>
