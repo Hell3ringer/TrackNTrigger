@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dashbord">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,24 @@
 
         </activity>
         <activity android:name=".to_do"/>
+
+
+        <activity android:name=".ListR"/>
+        <activity android:name=".remainder"/>
+        <receiver android:name=".MailReceiver"/>
+        <receiver android:process=":remote"
+            android:name="SmsReceiver"/>
+        <receiver android:name=".Receiver" />
+
+        <activity
+            android:name=".login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".logout"/>
+
     </application>
+
 
 </manifest>

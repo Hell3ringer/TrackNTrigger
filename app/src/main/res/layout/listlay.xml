@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#4B009688"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/no_remainder"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_marginTop="300dp"-->
+    <!--        android:text="Click on button to create Reminder"-->
+    <!--        android:textColor="#E91B1A1A"-->
+    <!--        android:textSize="16sp" />-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:backgroundTint="#4B009688"
+        android:layout_height="46dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab_back"
+            android:src="@drawable/ic_baseline_west_24"
+            android:tint="#252323"
+            app:backgroundTint="#CE065309"
+            app:fabSize="mini"
+            app:rippleColor="#131313"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="5sp"
+            android:text="Back"
+            android:textColor="#020202"
+            android:textSize="25sp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        android:tint="#00FFEB3B"
+        app:backgroundTint="#CE065309"
+        app:backgroundTintMode="add"
+        app:fabSize="normal"
+        app:rippleColor="#DF0E0E0E" />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="625dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="53dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvf"
+            android:layout_width="408dp"
+            android:layout_height="636dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            app:backgroundTint="#F40909" />
+
+    </LinearLayout>
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="103dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_gravity="center_vertical"-->
+    <!--        android:layout_marginStart="11dp"-->
+    <!--        android:layout_marginLeft="11dp"-->
+    <!--        android:layout_marginBottom="681dp"-->
+    <!--        android:text="Back"-->
+    <!--        android:textSize="24sp" />-->
+
+
+
+</RelativeLayout>

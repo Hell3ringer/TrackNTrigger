@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#8300BCD4"
+    android:layout_height="match_parent"
+    tools:context=".remainder">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#2196F3"-->
+<!--        app:title="Reminder"-->
+<!--        app:titleMarginStart="60dp" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_baseline_west_24"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#3F51B5"
+        app:fabSize="mini" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/set_R"-->
+    <!--        android:layout_width="263dp"-->
+    <!--        android:layout_height="38dp"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginStart="138dp"-->
+    <!--        android:layout_marginLeft="138dp"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:layout_marginEnd="79dp"-->
+    <!--        android:layout_marginRight="79dp"-->
+    <!--        android:text="Set Reminder"-->
+    <!--        android:textSize="20dp" />-->
+
+
+    <EditText
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:hint="Title"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/Comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="0dp"
+        android:hint="Description"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="0dp" />
+
+    <ImageView
+        android:id="@+id/dateicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Comment"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="32dp"
+        android:src="@mipmap/ic_launcher_cal_round" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="280dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/Comment"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="Date"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/time_icon"
+        android:layout_width="70dp"
+        android:layout_height="54dp"
+        android:layout_alignTop="@+id/dateicon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginRight="330dp"
+        android:src="@drawable/ic_baseline_access_time_24" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/date_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="Time"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="-7dp"
+        android:text=""
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/button_Remainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:text="Choose time" />
+
+    <Button
+        android:id="@+id/button_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="380dp"
+        android:text="Choose date" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_cancel"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/button_Remainder"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginEnd="106dp"-->
+    <!--        android:layout_marginRight="103dp"-->
+    <!--        android:text="cancel remainder" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="99dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="22dp"
+        android:background="#3F51B5"
+        android:clickable="true"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#3F51B5"
+        android:src="@drawable/ic_baseline_east_24" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="328dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:showText="true"
+        android:text="Repeat daily  "
+        android:textOff="Off"
+        android:textOn="On"
+        android:textSize="20dp"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track" />
+
+</RelativeLayout>

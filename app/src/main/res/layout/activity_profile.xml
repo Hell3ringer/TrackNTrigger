@@ -118,6 +118,7 @@
                 android:text="Share app"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/btnlogout"
             android:orientation="horizontal"
             android:layout_margin="10dp"
             android:layout_width="match_parent"

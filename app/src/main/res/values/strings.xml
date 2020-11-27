@@ -6,4 +6,28 @@
     <string name="quantity">Quantity</string>
     <string name="add">+</string>
     <string name="type">Type</string>
+
+    <string name="logout">logout</string>
+    <string name="applogo">applogo</string>
+    <string name="username">username</string>
+    <string name="profession">profession</string>
+    <string name="email_address">email address</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_login_here">Already have an account? login here</string>
+    <string name="login">login</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? register</string>
+    <string name="applogo2">applogo2</string>
+    <string name="emailaddress">Email address</string>
+    <string name="or">or</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="phone">Phone</string>
+    <string name="textview">TextView</string>
+    <string name="next">NEXT</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="resend">Resend</string>
+    <string name="app">app</string>
+    <string name="enterotp">enter otp</string>
+    <string name="Resend">Resend</string>
+    <string name="nextprocess">Next</string>
 </resources>

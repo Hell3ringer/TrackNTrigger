@@ -33,7 +33,7 @@ public class dashboard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(intent = new Intent(dashboard.this,Profile.class));
+                startActivity(intent = new Intent(dashboard.this,remainder.class));
 
             }
         });
