@@ -3,7 +3,7 @@ Android app
 
 Download "app-debug.apk" and install
 
-The features provided by this application are:
+The features provided by this application are:        
 • Gmail and Phone no. sign up       
 • Verification of Mail and Phone no. during login activity through OTP         
 • Notification through Push-notification and Mail         
@@ -16,7 +16,7 @@ The features provided by this application are:
 
 
 # Debug
-This application was developed on Android Studio and requires:
+This application was developed on Android Studio and requires:        
 • Min. SDK version 23         
 • Target SDK version 30         
 ● Android Gradle Plugin version 4.1.0         
